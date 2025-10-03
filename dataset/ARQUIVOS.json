@@ -1,0 +1,84 @@
+{
+	"name": "ARQUIVOS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "destino",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"arquivo": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().arquivo",
+					"type": "Expression"
+				},
+				"container": "rm96027"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "price",
+				"type": "String"
+			},
+			{
+				"name": "area",
+				"type": "String"
+			},
+			{
+				"name": "bedrooms",
+				"type": "String"
+			},
+			{
+				"name": "bathrooms",
+				"type": "String"
+			},
+			{
+				"name": "stories",
+				"type": "String"
+			},
+			{
+				"name": "mainroad",
+				"type": "String"
+			},
+			{
+				"name": "guestroom",
+				"type": "String"
+			},
+			{
+				"name": "basement",
+				"type": "String"
+			},
+			{
+				"name": "hotwaterheating",
+				"type": "String"
+			},
+			{
+				"name": "airconditioning",
+				"type": "String"
+			},
+			{
+				"name": "parking",
+				"type": "String"
+			},
+			{
+				"name": "prefarea",
+				"type": "String"
+			},
+			{
+				"name": "furnishingstatus",
+				"type": "String"
+			}
+		]
+	}
+}
