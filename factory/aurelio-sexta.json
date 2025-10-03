@@ -1,0 +1,9 @@
+{
+	"name": "aurelio-sexta",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "510966c4-5d1f-42e0-9e13-5fab103f4cee",
+		"tenantId": "11dbbfe2-89b8-4549-be10-cec364e59551"
+	}
+}
