@@ -26,7 +26,12 @@
 				}
 			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          NR_CLIENTE as short,",
+				"          NM_CLIENTE as string,",
+				"          QT_ESTRELAS as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> dbcli",
 				"source(output(",
