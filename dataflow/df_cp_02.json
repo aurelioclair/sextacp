@@ -1,0 +1,34 @@
+{
+	"name": "df_cp_02",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ARQUIVOS",
+						"type": "DatasetReference"
+					},
+					"name": "dbcli"
+				},
+				{
+					"dataset": {
+						"referenceName": "ARQUIVOS",
+						"type": "DatasetReference"
+					},
+					"name": "dbclicf"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> dbcli",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> dbclicf"
+			]
+		}
+	}
+}
